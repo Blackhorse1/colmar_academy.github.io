@@ -1,0 +1,31 @@
+
+
+
+
+
+.container{
+  display: flex;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: Aquamarine;
+  height: 64px;
+  margin-top: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+
+}
+
+li {
+ padding-right: 16px;
+}
