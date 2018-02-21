@@ -1,7 +1,7 @@
 
 
 body {
-  font-family: "Helvetica" , sans-serif;
+  font-family: "Raleway" , sans-serif;
 }
 
 .header {
@@ -11,9 +11,10 @@ body {
 
 /* Header */
 
-header {
+.header {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   background-color: #ffffff;
   height: 64px;
@@ -21,6 +22,18 @@ header {
   padding-left: 8px;
   padding-right: 8px;
 }
+
+.logotitle{
+flex-grow: 2;
+}
+
+.logotitle #colmar{
+  color: #0E453E;
+}
+.logotitle #academy{
+  color: #58bd91;
+}
+
 
 header ul {
   display: flex;
@@ -61,30 +74,53 @@ li {
 .info h1{
   display: flex;
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 700;
   color: #333333;
-
 }
 
+.info a:hover{
+  color: rgb(238,242,248);
+  transition: all 1s ease-out 0.2s;
+}
 .info p{
   color: #333333;
 }
 
-.info span{
+#button{
   text-align: center;
   align-items: center;
   max-width: 290px;
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #ffffff;
+  color: rgb(238,242,248);
   background-color: #333333;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
+
+#button a{
+  color: rgb(238,242,248);
+}
+
+#button:hover {
+  background-color: rgb(238,242,248);
+  color: #333333;
+  transition: all 1s ease-out 0.2s;
+}
+
+#button:hover a{
+color:#333333;
+transition: all 1s ease-out 0.5s;
+
+}
+
 
 /* Campus */
 
 .campus {
   display: flex;
-  margin: 32px 0px 32px 24px;
+  padding: 32px 0px 32px 24px;
+  background-color: rgb(238,242,248);
 
 
 }
@@ -106,7 +142,11 @@ margin-bottom: 32px;
 .main h1{
   font-size: 25px;
   margin-bottom: 20px;
+  color: #333333;
+}
 
+.quote p span{
+  color: #333333;
 }
 
 .sub{
@@ -124,7 +164,7 @@ margin-bottom: 32px;
   justify-content: space-between;
   width: auto;
   height: 35%;
-  border: 0.2px solid lightgrey;
+  border: 0.2px solid #015249;
 }
 
 .pic img{
@@ -138,6 +178,12 @@ margin-bottom: 32px;
 .subbox h3{
   font-weight: bold;
   line-height: 1.5;
+  color: #333333;
+}
+
+.subbox:last-child{
+  background-color:
+  #E9E9E9;
 }
 
 /*Courses*/
@@ -150,8 +196,10 @@ margin-bottom: 32px;
 
 .coursebox h1{
   text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 32px;
+  font-weight: 600;
+  color:rgb(238,242,248);
 }
 
 .courses {
@@ -171,7 +219,6 @@ margin-bottom: 32px;
   align-items: flex-start;
   width: 300px;
   height: 375px;
-  border: 1px solid;
   background-color: rgb(238,242,248);
 }
 
@@ -185,25 +232,59 @@ margin-bottom: 32px;
 }
 .courseinfo h3{
   font-weight: bold;
+  color: #333333;
+
 }
 
 .courseinfo p{
   margin-top: 8px;
   line-height: 2;
+  color: #333333;
+
 }
+
+.box:hover{
+  background-color: #333333;
+  border: none;
+
+  border-radius: 50px;
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
+
+}
+.box:hover h3,
+.box:hover p{
+  color: rgb(238,242,248);
+}
+
+
+
+.box:hover {
+  transition: all 1s ease-out .1s;
+}
+
+.box h3,
+.box p{
+  transition: all 0.5s ease;
+}
+
+
+
 
 /* Thesis */
 
 .thesisbox{
   padding: 32px 0px 24px 24px;
+  background-color: rgb(238,242,248);
 
 }
 
 
 .thesisbox h1{
   text-align:center;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 32px;
+  font-weight: 600;
+  color: #333333;
 }
 .thesis{
   display: flex;
@@ -223,11 +304,12 @@ margin: 32px 0px 24px;
   text-align: left;
   font-size: 25px;
   margin-bottom: 20px;
-
+  color: #333333;
 }
 
 .thesisquote p{
   margin-bottom: 24px;
+  color: #333333;
 }
 
 .thesissub{
@@ -244,11 +326,11 @@ margin: 32px 0px 24px;
   display: flex;
   height: 50px;
   width: 100%;
-  border-top: 1px solid grey;
+  border-top: 1px solid #015249;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  
+
 
 }
 
