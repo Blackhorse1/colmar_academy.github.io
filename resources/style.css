@@ -30,20 +30,39 @@ flex-grow: 2;
 .logotitle #colmar{
   color: #0E453E;
 }
+
 .logotitle #academy{
   color: #58bd91;
 }
 
-
 header ul {
   display: flex;
   flex-direction: row;
-
 }
 
 li {
  padding-right: 16px;
 }
+
+li:hover a{
+  color: #77cad5;
+  font-size: 17px;
+  transition: all 0.5s ease-out 0.1s;
+}
+
+@media only screen and (max-width: 480px){
+  body{
+  font-size: 12px;
+  }
+  .logotitle{
+    display: none;
+  }
+   li a{
+    display: none;
+
+  }
+}
+
 
 /* Banner */
 
@@ -55,11 +74,9 @@ li {
 }
 
 .banner img{
-  padding: 32px 24px;
-  min-width: 58%;
-  max-width: 58%;
+  margin: 32px 24px;
+  width: 58%;
   height: auto;
-
 }
 
 .banner .info{
@@ -71,7 +88,7 @@ li {
   line-height: 1;
 
 }
-.info h1{
+.info h1 a{
   display: flex;
   font-size: 35px;
   font-weight: 700;
@@ -94,12 +111,13 @@ li {
   padding-bottom: 8px;
   color: rgb(238,242,248);
   background-color: #333333;
+
   border-radius: 5px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 #button a{
-  color: rgb(238,242,248);
+  color: #58bd91;
 }
 
 #button:hover {
@@ -114,12 +132,36 @@ transition: all 1s ease-out 0.5s;
 
 }
 
+@media only screen and (max-width: 480px){
+  .banner{
+    display: flex;
+    flex-flow: column wrap;
+}
+.banner img{
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+  .info h1 a{
+    font-size: 19px;
+    text-align: center;
+  }
+  .info p{
+    text-align:center;
+  }
+  .info{
+    margin: 8px 0px 10px 75px;
+  }
+
+}
+
+
 
 /* Campus */
 
 .campus {
   display: flex;
-  padding: 32px 0px 32px 24px;
+  padding: 32px 24px 32px 24px;
   background-color: rgb(238,242,248);
 
 
@@ -168,11 +210,14 @@ margin-bottom: 32px;
 }
 
 .pic img{
-
   min-width: 10%;
   max-width: 80%;
   padding: 10px;
 
+}
+
+.pic .mobile{
+  display: none;
 }
 
 .subbox h3{
@@ -184,6 +229,28 @@ margin-bottom: 32px;
 .subbox:last-child{
   background-color:
   #E9E9E9;
+}
+
+
+@media only screen and (max-width: 480px){
+  .main{
+    display: none;
+  }
+  .subbox{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-right:24px;
+    padding: 0px;
+  }
+  .pic .desktop{
+    display: none;
+  }
+  .pic .mobile{
+    display: block;
+    width: cover;
+
+  }
 }
 
 /*Courses*/
@@ -246,34 +313,43 @@ margin-bottom: 32px;
 .box:hover{
   background-color: #333333;
   border: none;
-
   border-radius: 50px;
   box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.5);
-
+  transition: all 1s ease-out 0s;
 }
+
+.box:hover img{
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transition: all 1s ease-out 0s;
+}
+
 .box:hover h3,
 .box:hover p{
   color: rgb(238,242,248);
-}
-
-
-
-.box:hover {
-  transition: all 1s ease-out .1s;
-}
-
-.box h3,
-.box p{
   transition: all 0.5s ease;
 }
 
+@media only screen and (max-width: 480px){
+  .box{
+    height: 5%;
+    width: cover;
+    margin-top: 4px;
+  }
 
+  .courseinfo p{
+    display: none;
+  }
+  .box img{
+    display: none;
+  }
+}
 
 
 /* Thesis */
 
 .thesisbox{
-  padding: 32px 0px 24px 24px;
+  padding: 32px 24px 24px 24px;
   background-color: rgb(238,242,248);
 
 }
@@ -288,6 +364,8 @@ margin-bottom: 32px;
 }
 .thesis{
   display: flex;
+
+
 }
 .thesismain {
 min-width: 60%;
@@ -295,9 +373,9 @@ max-width:60%;
 padding-right: 24px;
 }
 
-.thesismain video {
-width: 100%;
-margin: 32px 0px 24px;
+.thesismain video{
+  width: 100%;
+  margin: 32px 0px 24px;
 }
 
 .thesismain h1{
@@ -320,17 +398,40 @@ margin: 32px 0px 24px;
 
 }
 
+@media only screen and (max-width:480px){
+  .thesis{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    vertical-align: baseline;
+  }
+  .thesismain{
+    display:block;
+
+  }
+  .thesismain video{
+    width: 100%;
+    height: auto;
+  }
+  .thesissub{
+    display: none;
+  }
+}
+
 /*Footer*/
 
 .footer{
   display: flex;
   height: 50px;
-  width: 100%;
+  width: cover;
   border-top: 1px solid #015249;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
+  background-color: white;
+  padding-bottom: 0px;
+  padding-left: 24px;
 
 }
 
