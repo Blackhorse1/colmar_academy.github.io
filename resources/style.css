@@ -50,16 +50,28 @@ li:hover a{
   transition: all 0.5s ease-out 0.1s;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 640px){
   body{
   font-size: 12px;
   }
   .logotitle{
     display: none;
   }
-   li a{
+   .desktop ul{
     display: none;
-
+    }
+ .mobile{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+  .mobile img{
+    padding-left: 40px;
+  }
+}
+@media only screen and (min-width: 640px){
+  .mobile img{
+    display: none;
   }
 }
 
@@ -238,10 +250,9 @@ margin-bottom: 32px;
   }
   .subbox{
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    margin-right:24px;
-    padding: 0px;
+    flex-direction: column ;
+    justify-content: space-between;
+    border: none;
   }
   .pic .desktop{
     display: none;
@@ -407,7 +418,7 @@ padding-right: 24px;
     vertical-align: baseline;
   }
   .thesismain{
-    display:block;
+    width: cover;
 
   }
   .thesismain video{
