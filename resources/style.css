@@ -45,7 +45,7 @@ li {
 }
 
 li:hover a{
-  color: #77cad5;
+  color: #77cad5;;
   font-size: 17px;
   transition: all 0.5s ease-out 0.1s;
 }
@@ -237,7 +237,10 @@ margin-bottom: 32px;
   line-height: 1.5;
   color: #333333;
 }
+ span:hover {
+   color: #77cad5;
 
+ }
 .subbox:last-child{
   background-color:
   #E9E9E9;
